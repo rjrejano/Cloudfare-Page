@@ -8,12 +8,18 @@
 </head>
 <body>
     <div class="container">
-        <h1>Ask Your AI Assistant</h1>
-        <div class="input-container">
-            <input type="text" id="userInput" placeholder="Type your question here...">
-            <button onclick="askAI()">Ask</button>
+        <div class="greeting">
+            <h1>Welcome!</h1>
+            <p>Ask me anything and I will do my best to provide an answer.</p>
         </div>
-        <div id="responseContainer"></div>
+        <div class="assistant">
+            <h2>AI Assistant</h2>
+            <div class="input-container">
+                <input type="text" id="userInput" placeholder="Type your question here...">
+                <button onclick="askAI()">Ask</button>
+            </div>
+            <div id="responseContainer"></div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
