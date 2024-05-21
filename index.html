@@ -21,6 +21,18 @@
             <div id="responseContainer"></div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        function askAI() {
+            const userInput = document.getElementById('userInput').value;
+            const responseContainer = document.getElementById('responseContainer');
+            
+            if (!userInput.trim()) {
+                responseContainer.innerHTML = '<p>Please enter a question.</p>';
+                return;
+            }
+
+            responseContainer.innerHTML = '<p><strong>Answer:</strong> Coming soon</p>';
+        }
+    </script>
 </body>
 </html>
