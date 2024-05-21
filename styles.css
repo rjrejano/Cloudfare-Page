@@ -13,6 +13,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
+    flex-direction: row;
     width: 80%;
     max-width: 900px;
     overflow: hidden;
@@ -22,6 +23,7 @@ body {
 .greeting, .assistant {
     padding: 2rem;
     width: 50%;
+    box-sizing: border-box;
 }
 
 .greeting {
@@ -85,5 +87,49 @@ button:hover {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .greeting, .assistant {
+        width: 100%;
+    }
+
+    .greeting {
+        text-align: center;
+    }
+
+    .assistant {
+        text-align: center;
+    }
+
+    .input-container {
+        flex-direction: column;
+    }
+
+    input, button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    .greeting, .assistant {
+        padding: 1rem;
+    }
+
+    input, button {
+        font-size: 1rem;
+        padding: 0.75rem;
     }
 }
