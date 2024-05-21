@@ -10,7 +10,7 @@ async function askAI() {
     responseContainer.innerHTML = '<p>Thinking...</p>';
 
     try {
-        const response = await fetch('https://your-worker-subdomain.workers.dev', { // Update with your Worker URL
+        const response = await fetch('https://cold-haze-111a.jarvisguide.workers.dev/', { // Update with your Worker URL
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
