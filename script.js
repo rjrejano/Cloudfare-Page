@@ -19,7 +19,12 @@ async function askAI() {
         });
 
         const data = await response.json();
-        responseContainer.innerHTML = `<p><strong>Answer:</strong> ${data.contents[0].text}</p>`;
+        // Extract and concatenate the parts of the response text
+        const answer = data[0].candidates.map(candidate => 
+            candidate.content.parts.map(part => part.text).join('')
+        ).join(' ');
+
+        responseContainer.innerHTML = `<p><strong>Answer:</strong> ${answer}</p>`;
     } catch (error) {
         responseContainer.innerHTML = '<p>Something went wrong. Please try again.</p>';
     }
