@@ -20,8 +20,10 @@ async function askAI() {
 
         const data = await response.json();
         // Extract and concatenate the parts of the response text
-        const answer = data[0].candidates.map(candidate => 
-            candidate.content.parts.map(part => part.text).join('')
+        const answer = data.map(item => 
+            item.candidates.map(candidate => 
+                candidate.content.parts.map(part => part.text).join('')
+            ).join(' ')
         ).join(' ');
 
         responseContainer.innerHTML = `<p><strong>Answer:</strong> ${answer}</p>`;
