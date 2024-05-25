@@ -77,6 +77,12 @@ button:hover {
 #responseContainer {
     margin-top: 1rem;
     color: #333;
+    max-height: 300px; /* Adjust as needed */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
 }
 
 @keyframes slideIn {
