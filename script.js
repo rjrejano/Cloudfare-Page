@@ -18,8 +18,11 @@ async function askAI() {
             body: JSON.stringify({ question: userInput }),
         });
 
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
         const data = await response.json();
-        // Extract and concatenate the parts of the response text
         const answer = data.map(item => 
             item.candidates.map(candidate => 
                 candidate.content.parts.map(part => part.text).join('')
@@ -28,6 +31,7 @@ async function askAI() {
 
         responseContainer.innerHTML = `<p><strong>Answer:</strong> ${answer}</p>`;
     } catch (error) {
+        console.error('Error:', error);
         responseContainer.innerHTML = '<p>Something went wrong. Please try again.</p>';
     }
 }
