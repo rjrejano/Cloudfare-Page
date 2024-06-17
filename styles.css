@@ -1,6 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+    background: url('https://i.ibb.co/t2fVyZ6/milkyway-8190232-1280.jpg') no-repeat center center fixed, linear-gradient(to right, #f5f7fa, #c3cfe2);
+    background-size: cover;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -9,7 +10,7 @@ body {
 }
 
 .container {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency to see the background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
